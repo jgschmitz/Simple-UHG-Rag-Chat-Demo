@@ -7,7 +7,7 @@
 4️⃣ Send retrieved data to LLM for response generation <br>
 5️⃣ Return final answer to the user <br>
 
-🛠️ Implementation Details
+🛠️ Implementation Details <br>
 1️⃣ Convert UHG Documents into Chunks & Create Embeddings
 Break long documents into smaller chunks (e.g., 512-1024 tokens)
 Generate vector embeddings for each chunk using OpenAI, Hugging Face, or Unsloth:
