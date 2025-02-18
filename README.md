@@ -1,11 +1,11 @@
 # Simple-UHG-Rag-Chat-Demo
 # Example RAG chat for UHG Documents 
 
-1️⃣ Ingest UHG documents → Chunk & Embed
-2️⃣ Store embeddings in MongoDB Atlas
-3️⃣ Retrieve relevant chunks using $vectorSearch
-4️⃣ Send retrieved data to LLM for response generation
-5️⃣ Return final answer to the user
+1️⃣ Ingest UHG documents → Chunk & Embed <br>
+2️⃣ Store embeddings in MongoDB Atlas <br>
+3️⃣ Retrieve relevant chunks using $vectorSearch <br>
+4️⃣ Send retrieved data to LLM for response generation <br>
+5️⃣ Return final answer to the user <br>
 
 🛠️ Implementation Details
 1️⃣ Convert UHG Documents into Chunks & Create Embeddings
