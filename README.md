@@ -24,15 +24,14 @@ Store these embeddings in MongoDB Atlas. <br>
 Define a schema like: 
 ```
 {
-    "_id": ObjectId("..."),
-    "text": "UHG document chunk...",
-    "embedding": [0.12, -0.03, 0.75, ...],
-    "source": "claims_policy.pdf",
-    "metadata": {
-        "section": "Claims Processing",
-        "date": "2024-02-18"
+        "$vectorSearch": {
+            "queryVector": query_embedding.tolist(),
+            "path": "embedding",
+            "numCandidates": 50,
+            "limit": 5,
+            "index": "vector_index"
+        }
     }
-}
 ```
 Index the Vector Field (embedding)
 ```
