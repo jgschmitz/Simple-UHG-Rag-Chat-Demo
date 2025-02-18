@@ -42,11 +42,8 @@ db.uhg_docs.createIndex(
 );
 ```
 3️⃣ Retrieve Relevant Chunks using $vectorSearch <br>
-When a user asks a question:
+When a user asks a question: <br>
 
-python
-Copy
-Edit
 query_embedding = model.encode(["How do I submit a claim?"])
 pipeline = [
     {
@@ -60,10 +57,9 @@ pipeline = [
     }
 ]
 retrieved_docs = list(db.uhg_docs.aggregate(pipeline))
+```
 4️⃣ Send Retrieved Chunks to LLM for Context-aware Answer
-python
-Copy
-Edit
+```
 import openai
 
 context = "\n".join([doc["text"] for doc in retrieved_docs])
@@ -75,4 +71,4 @@ response = openai.ChatCompletion.create(
 )
 
 print(response["choices"][0]["message"]["content"])
-
+```
