@@ -43,7 +43,7 @@ db.uhg_docs.createIndex(
 ```
 3️⃣ Retrieve Relevant Chunks using $vectorSearch <br>
 When a user asks a question: <br>
-
+```
 query_embedding = model.encode(["How do I submit a claim?"])
 pipeline = [
     {
