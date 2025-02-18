@@ -18,8 +18,6 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 documents = ["UHG policy document section 1...", "UHG claim process details..."]
 embeddings = model.encode(documents)
 ```
-
-Store these embeddings in MongoDB Atlas. <br>
 2️⃣ Store in MongoDB Atlas Vector Search
 Define a schema like: 
 ```
