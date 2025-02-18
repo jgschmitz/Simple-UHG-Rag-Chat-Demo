@@ -19,13 +19,10 @@ documents = ["UHG policy document section 1...", "UHG claim process details..."]
 embeddings = model.encode(documents)
 ```
 
-Store these embeddings in MongoDB Atlas.
+Store these embeddings in MongoDB Atlas. <br>
 2️⃣ Store in MongoDB Atlas Vector Search
-Define a schema like:
-
-json
-Copy
-Edit
+Define a schema like: 
+```
 {
     "_id": ObjectId("..."),
     "text": "UHG document chunk...",
@@ -36,15 +33,15 @@ Edit
         "date": "2024-02-18"
     }
 }
+```
 Index the Vector Field (embedding)
-javascript
-Copy
-Edit
+```
 db.uhg_docs.createIndex(
     { "embedding": "vector" },
     { "index": "vector_index", "numDimensions": 768, "similarity": "cosine" }
 );
-3️⃣ Retrieve Relevant Chunks using $vectorSearch
+```
+3️⃣ Retrieve Relevant Chunks using $vectorSearch <br>
 When a user asks a question:
 
 python
